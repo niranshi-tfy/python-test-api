@@ -8,5 +8,5 @@ app = FastAPI()
 dotenv.load_dotenv(".env")
 @app.get("/")
 async def root():
-    await asyncio.sleep(int(os.environ["SLEEP_TIME"]))
+    await asyncio.sleep(0.1)
     return {"message": "Hello World"}
